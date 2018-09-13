@@ -1,0 +1,22 @@
+total 324
+-rw-r--r-- 1 root root      5 Feb 21 15:30 _1.txt
+-rw-r--r-- 1 root root    783 Jul 26  2018 bpi_gpio.h
+-rw-r--r-- 1 root root    837 Jul 26  2018 bpi_uart.h
+-rwxrwxrwx 1 root root    143 Jul 26  2018 build.sh
+-rw-r--r-- 1 root root    530 Jul 26  2018 config.ini
+-rw-r--r-- 1 root root   3950 Jul 26  2018 exception.c
+-rw-r--r-- 1 root root   4681 Feb  5 12:41 exception.h
+-rw-r--r-- 1 root root   3103 Jul 26  2018 gpio_dht.h
+drwxr-xr-x 2 root root   4096 Feb  7 02:12 include
+-rw-r--r-- 1 root root 143112 Jul 26  2018 libmodbus.so
+-rw-r--r-- 1 root root   1859 Jul 26  2018 linux_macaddr.h
+-rw-r--r-- 1 root root      0 Feb 21 15:33 lsoutput.txt
+-rwxr-xr-x 1 root root  51640 Feb  7 02:21 main
+-rw-r--r-- 1 root root  19481 Feb  7 02:21 main.c
+-rw-r--r-- 1 root root      0 Jul 26  2018 main.log
+-rw-r--r-- 1 root root  45104 Jul 26  2018 main.o
+-rw-r--r-- 1 root root    614 Jul 26  2018 Makefile
+-rw-r--r-- 1 root root   3138 Jul 26  2018 nb_ai1c1.h
+-rw-r--r-- 1 root root   2334 Jul 26  2018 nb_av1c1.h
+-rw-r--r-- 1 root root    325 Jul 26  2018 test.ini
+-rw-r--r-- 1 root root   3030 Jul 26  2018 xw_thb.h

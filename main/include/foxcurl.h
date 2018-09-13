@@ -1,0 +1,61 @@
+//curl :  gcc ?.c -o ? -lcurl
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <curl/curl.h>
+#include <string.h>
+#include <iconv.h>
+
+#define URLADDR "http://192.168.1.110:3004/BSSAPI/V2/LoginBSS"
+#define SENDDATA "wd=hava&hehe=123456"
+CURL *curl;
+CURLcode res;
+
+void split(char **arr,char *str,const char *del)
+{
+	char *s=strtok(str,del);
+	while(s!=NULL)
+	{
+		*arr++=s;
+		s=strtok(NULL,del);
+	}
+}
+
+int curl_SendData(char *urladdr,char *senddata)
+{
+	int iRet=1;
+
+	curl = curl_easy_init();
+	if(curl)
+	{
+		curl_easy_setopt(curl,CURLOPT_URL,urladdr);
+		curl_easy_setopt(curl,CURLOPT_TIMEOUT,3);   //
+		curl_easy_setopt(curl,CURLOPT_POST,1L);
+		curl_easy_setopt(curl,CURLOPT_POSTFIELDS,senddata);
+		res=curl_easy_perform(curl);
+		if(res!=CURLE_OK)
+		{
+			fprintf(stderr,"perform failed : %s\n",curl_easy_strerror(res));
+		}
+		else
+		{
+			puts("send data ok~~\n");iRet=0;
+		}
+		curl_easy_cleanup(curl);
+		return iRet;
+	}
+}
+
+
+
+
+
+/*
+int main(int argc,char *argv[])
+{
+	curl_SendData(URLADDR,SENDDATA);	
+	exit(EXIT_SUCCESS);
+	
+
+}
+*/
